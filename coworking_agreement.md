@@ -29,5 +29,5 @@ Both members appreciate feedback that is respectful, honest, and constructive. O
 *Other co-working agreements that were not captured in the above sections.*
 
 ## Signatures
-______________ _______________
-Date: _________
+Porselvi lakshminarayanan & Thais Palma de Brito
+| Date: 9/21/26
