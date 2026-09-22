@@ -35,6 +35,19 @@ class Vendor:
 
         return True
 
+    def swap_first_item(self, other_vendor):
+
+        if  not self.inventory or not other_vendor.inventory:
+            return False
+
+        my_item = self.inventory.pop(0)
+        their_item = other_vendor.inventory.pop(0)
+
+        self.inventory.insert(0, their_item)
+        other_vendor.inventory.insert(0, my_item)
+        
+        return True
+
 
 
 
