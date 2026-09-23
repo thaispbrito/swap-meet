@@ -7,8 +7,11 @@ class Clothing(Item):
         
         
     def get_category(self):
-        return "Clothing"
+        return super().get_category()
     
     def __str__(self):
         
         return f"An object of type Clothing with id {self.id}. It is made from {self.fabric} fabric."
+
+    def clothing_condition_description(self):
+        super().condition_description()

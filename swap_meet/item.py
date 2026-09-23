@@ -6,8 +6,8 @@ class Item:
         self.condition = condition
 
     def get_category(self):
-        return "Item"
-
+        return self.__class__.__name__
+       
     def __str__(self):
 
         return f"An object of type Item with id {self.id}."
@@ -22,3 +22,4 @@ class Item:
             5 : "mint"
         }
         return descriptions[self.condition]
+
