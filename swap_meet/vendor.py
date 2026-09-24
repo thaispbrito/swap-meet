@@ -14,6 +14,8 @@ def my_max(collection, key):
 
     return max_item
 
+### Wave 1
+
 class Vendor:
 
     def __init__(self, inventory=None):
@@ -35,6 +37,8 @@ class Vendor:
 
         return item
 
+    ### Wave 2
+
     def get_by_id(self, item_id):
 
         for item in self.inventory:
@@ -42,6 +46,8 @@ class Vendor:
                 return item
             
         return None
+
+    ### Wave 3
 
     def swap_items(self, other_vendor, my_item, their_item):
 
@@ -56,18 +62,20 @@ class Vendor:
 
         return True
 
+    ### Wave 4
+
     def swap_first_item(self, other_vendor):
 
         if not self.inventory or not other_vendor.inventory:
             return False
 
-        my_item = self.inventory.pop(0)
-        their_item = other_vendor.inventory.pop(0)
+        # Get first item from each inventory
+        my_item = self.inventory[0]
+        their_item = other_vendor.inventory[0]
 
-        self.inventory.insert(0, their_item)
-        other_vendor.inventory.insert(0, my_item)
-        
-        return True
+        return self.swap_items(other_vendor, my_item, their_item)
+
+    ### Wave 5 - Create subclasses
 
     ### Wave 6
 
@@ -95,16 +103,7 @@ class Vendor:
         my_item = self.get_best_by_category(their_priority)
         their_item = other_vendor.get_best_by_category(my_priority)
 
-        if my_item is None or their_item is None:
-            return False
-        
-        self.inventory.remove(my_item)
-        other_vendor.inventory.append(my_item)
-
-        other_vendor.inventory.remove(their_item)
-        self.inventory.append(their_item)
-
-        return True
+        return self.swap_items(other_vendor, my_item, their_item)
 
 
 
