@@ -4,9 +4,6 @@ class Clothing(Item):
     def __init__(self, id=None, fabric="Unknown", condition=0):
         super().__init__(id, condition)
         self.fabric = fabric
-        
-    # def get_category(self):
-    #     return super().get_category()
     
     def __str__(self):
         item_message = super().__str__()
