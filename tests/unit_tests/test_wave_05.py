@@ -130,30 +130,22 @@ def test_items_have_condition_descriptions_that_are_the_same_regardless_of_type(
     assert one_condition_description != five_condition_description
 
 
-### Two additional tests for condition_description method
+### Added two additional tests for condition_description method
+
 #@pytest.mark.skip
 def test_condition_description_for_valid_condition():
-    # Arrange
     item_a = Electronics(condition=4.2)
     item_b = Clothing(condition=5.0)
     item_c = Decor()
 
-    # Act
-    item_a_cond_description= item_a.condition_description()
-    item_b_cond_description= item_b.condition_description()
-    item_c_cond_description= item_c.condition_description()
-
-    # Assert
-    assert item_a_cond_description == "like new"
-    assert item_b_cond_description == "brand new"
-    assert item_c_cond_description == "disgusting"
+    assert item_a.condition_description() == "like new"
+    assert item_b.condition_description() == "brand new"
+    assert item_c.condition_description() == "disgusting"
 
 #@pytest.mark.skip
 def test_condition_description_for_invalid_condition_raises_error():
-    # Arrange
     item = Electronics(condition=7.2)
 
-    # Act + Assert
     with pytest.raises(ValueError):
         item.condition_description()
 
