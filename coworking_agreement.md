@@ -25,8 +25,12 @@ Both members appreciate feedback that is respectful, honest, and constructive. O
 ## One Team Communication Skill to Improve
 *What is a teamwork-related skill you want to work on?*
 
+Communication when explaining code.
+
 ## Optional: Other agreements
 *Other co-working agreements that were not captured in the above sections.*
+
+N/A
 
 ## Signatures
 Porselvi lakshminarayanan & Thais Palma de Brito
